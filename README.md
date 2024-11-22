@@ -7,12 +7,12 @@
 ## **Features 🌟**
 
 - 📚 **Complete Six Hadith Books:**  
-  Access the six major Hadith collections (Al-Sihah al-Sitta):
+  Access the six major Hadith collections:
   1. **Sahih al-Bukhari**
   2. **Sahih Muslim**
-  3. **Sunan Abu Dawood**
+  3. **Sunan Ahmad ibn Hanbal**
   4. **Sunan al-Tirmidhi**
-  5. **Sunan al-Nasa'i**
+  5. **Muwatta Malik**
   6. **Sunan Ibn Majah**
 
 - 🔍 **Advanced Search:**  
