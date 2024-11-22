@@ -92,12 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: colors.primaryColor,
       appBar: AppBar(
-        backgroundColor: colors.primaryColor,
+        backgroundColor: colors.tileColor,
         centerTitle: true,
-        title: const Text(
-          'Sitatu Jawahir',
+        title: Text(
+          'SITATU JAWAHIR',
           style: TextStyle(
             fontFamily: 'Poppins',
+            color: colors.fontColorLight
           ),
         ),
       ),
