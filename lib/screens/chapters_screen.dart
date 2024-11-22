@@ -21,52 +21,55 @@ class ChapterScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Chapters'),
         centerTitle: true,
-        backgroundColor: colors.primaryColor,
+        backgroundColor: colors.tileColor,
         foregroundColor: colors.fontColorLight,
       ),
-      body: ListView.builder(
-        itemCount: chapters.length,
-        itemBuilder: (context, index) {
-          final chapterItem = chapters[index];
-          final chapterId = chapterItem['id'];
-          final chapterName = chapterItem['english'];
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: ListTile(
-              tileColor: colors.tileColor,
-              onTap: () {
-                final filteredHadiths = _getHadithsByChapterId(chapterId);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HadithScreen(hadithContent: filteredHadiths,chapterName:chapterName),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+          itemCount: chapters.length,
+          itemBuilder: (context, index) {
+            final chapterItem = chapters[index];
+            final chapterId = chapterItem['id'];
+            final chapterName = chapterItem['english'];
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: ListTile(
+                tileColor: colors.tileColor,
+                onTap: () {
+                  final filteredHadiths = _getHadithsByChapterId(chapterId);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HadithScreen(hadithContent: filteredHadiths,chapterName:chapterName),
+                    ),
+                  );
+                },
+                leading: Text(
+                  '${chapterItem['id']}',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: colors.fontColorLight,
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
                   ),
-                );
-              },
-              leading: Text(
-                '${chapterItem['id']}',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: colors.fontColorLight,
-                  fontFamily: 'Poppins',
-                  fontSize: 20,
+                ),
+                title: Text(
+                  '${chapterItem['english']}',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: colors.fontColorLight,
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              title: Text(
-                '${chapterItem['english']}',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: colors.fontColorLight,
-                  fontFamily: 'Poppins',
-                  fontSize: 15,
-                ),
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
