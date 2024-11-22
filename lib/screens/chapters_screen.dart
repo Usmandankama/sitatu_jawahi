@@ -22,6 +22,7 @@ class ChapterScreen extends StatelessWidget {
         title: const Text('Chapters'),
         centerTitle: true,
         backgroundColor: colors.primaryColor,
+        foregroundColor: colors.fontColorLight,
       ),
       body: ListView.builder(
         itemCount: chapters.length,
