@@ -1,7 +1,3 @@
-Here's a descriptive **README.md** file for your app, *Sitatu Jawahir*:
-
----
-
 # **Sitatu Jawahir 📜**
 
 **Sitatu Jawahir** (The Six Gems) is a comprehensive Hadith app featuring the six canonical Hadith collections. Designed for students, scholars, and anyone interested in learning more about Islam through authentic narrations, this app brings essential Hadith resources to your fingertips.
