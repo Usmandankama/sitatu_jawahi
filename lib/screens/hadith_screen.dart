@@ -5,9 +5,10 @@ import '../components/hadith_pageview.dart';
 
 class HadithScreen extends StatefulWidget {
   final List<dynamic> hadithContent;
-  String chapterName;
-  
-  HadithScreen({super.key, required this.hadithContent, required this.chapterName});
+  final String chapterName;
+
+  const HadithScreen(
+      {super.key, required this.hadithContent, required this.chapterName});
 
   @override
   State<HadithScreen> createState() => _HadithScreenState();
@@ -19,6 +20,7 @@ class _HadithScreenState extends State<HadithScreen> {
     return Scaffold(
       backgroundColor: colors.primaryColor,
       appBar: AppBar(
+        foregroundColor: colors.fontColorLight,
         title: Text(
           widget.chapterName,
           style: const TextStyle(
