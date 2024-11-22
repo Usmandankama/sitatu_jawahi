@@ -20,6 +20,7 @@ class _HadithScreenState extends State<HadithScreen> {
     return Scaffold(
       backgroundColor: colors.primaryColor,
       appBar: AppBar(
+        backgroundColor: colors.tileColor,
         foregroundColor: colors.fontColorLight,
         title: Text(
           widget.chapterName,
@@ -28,7 +29,6 @@ class _HadithScreenState extends State<HadithScreen> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: colors.primaryColor,
       ),
       body: Container(
         decoration: BoxDecoration(
